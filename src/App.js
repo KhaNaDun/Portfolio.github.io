@@ -1,6 +1,7 @@
 
 import './App.css';
 import Navbar from './Components/Navbar';
+import EducationPage from './Pages/EducationPage';
 import Footer from './Pages/Footer';
 import Home from './Pages/Home';
 import List from './Pages/List';
@@ -46,11 +47,22 @@ function App() {
     }
   ]
 
+  let educations = [
+    {
+      title : 'Bachelor of Science ',
+      discription : 'Finished Programming (e.g., Java, Python, C++) Data Structures and Algorithms, Databases (e.g., SQL) and Web Development',
+    },
+    {
+      title : 'Certificates of Web Design ',
+      discription : 'Finished Web Design & Development course Using HTML,CSS,JavaScript,React and Vue',
+    }
+  ]
+
 
 
   return (
    <>
-   <div className=" bg-slate-900 ">
+   <div  class=" bg-slate-900 " >
      <Navbar/>
      <div className="container mx-auto px-12 md:px-12 lg:px-12">
         <Home />
@@ -61,6 +73,9 @@ function App() {
         
         <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-300"></hr>
         <Skill skillData = {skills}/>
+        <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-300"></hr>
+         <EducationPage EducationData = {educations}/>
+        <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-300"></hr>
         <Footer/>
      </div>
      
